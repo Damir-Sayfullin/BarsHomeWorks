@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3</title>
+</head>
+<body>
+    <h1>Задание 3</h1>
+    <ul id="list">
+        <li>Элемент 1</li>
+        <li>Элемент 2</li>
+        <li>Элемент 3</li>
+        <li>Элемент 4</li>
+        <li>Элемент 5</li>
+    </ul>
+    <script>
+        document.getElementById('list').addEventListener('click', function() {
+            if (event.target.tagName === 'LI') 
+                console.log(event.target.innerText);
+        });
+    </script>
+</body>
+</html>

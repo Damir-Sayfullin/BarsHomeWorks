@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+</head>
+<body>
+    <h1>Задание 2</h1>
+    <button id="button1" type="button">Сменить цвет фона</button>
+    <script>
+        document.getElementById('button1').addEventListener('click', function() {
+            const randomColor = Math.floor(Math.random()*(10000000)).toString(16).padStart(6,'0').substring(0, 6);
+            document.body.style.backgroundColor = "#" + randomColor;
+        });
+    </script>
+</body>
+</html>

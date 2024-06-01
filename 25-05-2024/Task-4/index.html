@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 4</title>
+</head>
+<body>
+    <h1>Задание 4</h1>
+    Пароль: qwerty<br>
+    Последовательность введенных клавиш:
+    <p id="user-message"></p>
+    <p id="secret-message">Вы ввели секретный код!</p>
+    <script>
+        let userCode = '';
+        const secretCode = 'qwerty';
+        document.getElementById('secret-message').style.display = 'none';
+        document.body.addEventListener('keydown', function(event) {
+            userCode += event.key;
+            if (userCode.length > secretCode.length)
+                userCode = userCode.slice(-secretCode.length);
+            document.getElementById('user-message').innerText = userCode;
+            if (userCode === secretCode) {
+                document.getElementById('secret-message').style.display = 'block';
+            } else {
+                document.getElementById('secret-message').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
