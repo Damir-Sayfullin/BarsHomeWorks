@@ -26,6 +26,11 @@ button {
     }
 }
 
+button.back{
+    margin: 5px;
+    padding: 10px;
+}
+
 input[type="text"] {
     background-color: black;
     border: none;
