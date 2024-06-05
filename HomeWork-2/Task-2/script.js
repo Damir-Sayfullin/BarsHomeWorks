@@ -10,6 +10,12 @@ button.addEventListener('click', function() {
     checkbox.type = 'checkbox';
     checkbox.addEventListener('change', checkboxChange);
     li.prepend(checkbox);
+    let delButton = document.createElement('button');
+    delButton.innerText = 'X';
+    delButton.className = 'del';
+    delButton.title = 'Удалить';
+    delButton.addEventListener('click', delButtonClick);
+    li.append(delButton);
     list.append(li);
     input.value = '';
     button.disabled = true;
@@ -29,4 +35,8 @@ function checkboxChange() {
     } else {
         this.parentNode.className = '';
     }
+}
+
+function delButtonClick() {
+    this.parentNode.remove();
 }
