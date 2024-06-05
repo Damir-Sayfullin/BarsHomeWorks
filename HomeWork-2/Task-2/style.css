@@ -9,6 +9,10 @@ ul {
     padding: 0;
 }
 
+li {
+    margin-bottom: 5px;
+}
+
 li.checked {
     text-decoration: line-through;
     color: rgb(80, 80, 80);
@@ -29,6 +33,12 @@ button {
 button.back{
     margin: 5px;
     padding: 10px;
+}
+
+button.del{
+    background-color: rgb(150, 0, 0);
+    margin-left: 10px;
+    font-size: 12px;
 }
 
 input[type="text"] {
