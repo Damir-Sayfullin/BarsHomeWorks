@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Задание 4</title>
 </head>
 <body>
     <h1>Задание 4</h1>
-    Пароль: qwerty<br>
-    Последовательность введенных клавиш:
-    <p id="user-message"></p>
-    <p id="secret-message">Вы ввели секретный код!</p>
+    <p>Пароль: qwerty</p>
+    <p>Последовательность введенных клавиш:</p>
+    <p id="user-message" class="user-message"</p>
+    <p id="secret-message" class="secret-message">Вы ввели секретный код!</p>
     <script>
         let userCode = '';
         const secretCode = 'qwerty';
